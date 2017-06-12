@@ -1,6 +1,49 @@
 /*
 我们自己css样式
  */
+/**
+Bootstrap 扩展
+ */
+.btn-itcast {
+    color: #ffffff;
+    background-color: #E92322;
+    border-color: #DB3B43;
+}
+
+.btn-itcast:hover,
+.btn-itcast:focus,
+.btn-itcast:active,
+.btn-itcast.active,
+.open .dropdown-toggle.btn-itcast {
+    color: #ffffff;
+    background-color: #E92322;
+    border-color: #DB3B43;
+}
+
+.btn-itcast:active,
+.btn-itcast.active,
+.open .dropdown-toggle.btn-itcast {
+    background-image: none;
+}
+
+.btn-itcast.disabled,
+.btn-itcast[disabled],
+fieldset[disabled] .btn-itcast,
+.btn-itcast.disabled:hover,
+.btn-itcast[disabled]:hover,
+fieldset[disabled] .btn-itcast:hover,
+.btn-itcast.disabled:focus,
+.btn-itcast[disabled]:focus,
+fieldset[disabled] .btn-itcast:focus,
+.btn-itcast.disabled:active,
+.btn-itcast[disabled]:active,
+fieldset[disabled] .btn-itcast:active,
+.btn-itcast.disabled.active,
+.btn-itcast[disabled].active,
+fieldset[disabled] .btn-itcast.active {
+    background-color: #E92322;
+    border-color: #DB3B43;
+}
 
 /*
 公共样式
@@ -41,10 +84,21 @@ body{
 }
 /*使用直接子代,避免冲突*/
 #header>.topbar{
+     height:40px;
+     border-bottom:1px solid #c0c0c0;
+     line-height:40px;
+ }
+/*加上表头的中间竖线,,,,列表中间分割线的做法*/
+#header>.topbar>.container>.row>div{
     height:40px;
-   border-bottom:1px solid #c0c0c0;
-    line-height:40px;
+    color:#888;
+    font-size:12px;
 }
+#header>.topbar>.container>.row>div + div{
+    border-left:1px solid #c0c0c0;
+}
+
+
 #header .mobile-link{
     color:#888;
     font-size:12px;
@@ -53,9 +107,16 @@ body{
 #header .mobile-link:hover{
   text-decoration:none;
 }
+/*二维码图片与a标签之间有距离,不能点击二维码标签
+要设置绝对定位,找到相对定位的父亲,设置left top的值
+margin-left作用是让居中,*/
 
 #header .mobile-link>img{
    display:none;
+    position:absolute;
+    left:50%;
+    top:30px;
+    margin-left:-60px;
 }
 #header .mobile-link:hover>img{
     display:block;
