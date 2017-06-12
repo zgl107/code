@@ -1,7 +1,85 @@
 /*
 我们自己css样式
  */
-header .container{
+
+/*
+公共样式
+*/
+body{
+    font-family:  "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+@font-face {
+    font-family: 'itcast';
+    src: url('../font/MiFie-Web-Font.eot') format('embedded-opentype'),
+    url('../font/MiFie-Web-Font.svg') format('svg'),
+    url('../font/MiFie-Web-Font.ttf') format('truetype'),
+    url('../font/MiFie-Web-Font.woff') format('woff');
+}
+[class^="icon-"],[class*=" icon-"]{
+    font-family: itcast;
+    font-style:normal; /*控制字体图标,不让他倾斜*/
+}
+/**
+字体图标
+ */
+.icon-mobilephone::before {
+    content: "\e908";
+    font-size: 13px;
+}
+
+.icon-telephone::before {
+    content: "\e909";
+    font-size: 15px;
+}
+
+/**
+* 头部区域
+ */
+#header{
     height:200px;
-    background-color: deeppink;
+
+}
+/*使用直接子代,避免冲突*/
+#header>.topbar{
+    height:40px;
+   border-bottom:1px solid #c0c0c0;
+    line-height:40px;
+}
+#header .mobile-link{
+    color:#888;
+    font-size:12px;
+
+}
+#header .mobile-link:hover{
+  text-decoration:none;
+}
+
+#header .mobile-link>img{
+   display:none;
+}
+#header .mobile-link:hover>img{
+    display:block;
+}
+/*#header>.topbar>.container{
+    height:40px;
+    background-color: #28a4c9;
+}*/
+/**
+测试样式
+ */
+section{
+    height:200px;
+    background-color:#ffffff;
+}
+section:nth-of-type(2n){
+    background-color: #000000;
+}
+
+
+
+/**
+*  脚部区域
+ */
+#footer{
+    height:200px;
 }
