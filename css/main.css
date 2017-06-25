@@ -1,6 +1,178 @@
 /*
 我们自己css样式
  */
+
+/*
+公共样式
+*/
+body{
+    font-family:  "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+@font-face {
+    font-family: 'itcast';
+    src: url('../font/MiFie-Web-Font.eot') format('embedded-opentype'),
+    url('../font/MiFie-Web-Font.svg') format('svg'),
+    url('../font/MiFie-Web-Font.ttf') format('truetype'),
+    url('../font/MiFie-Web-Font.woff') format('woff');
+}
+[class^="icon-"],[class*=" icon-"]{
+    font-family: itcast;
+    font-style:normal; /*控制字体图标,不让他倾斜*/
+}
+/**
+字体图标
+ */
+.icon-mobilephone::before {
+    content: "\e908";
+    font-size: 13px;
+}
+
+.icon-telephone::before {
+    content: "\e909";
+    font-size: 15px;
+}
+.icon-logo::before {
+    content: "\e93e";
+    font-size: 15px;
+}
+
+.icon-icon::before {
+    content: "\e920";
+}
+
+/**
+* 头部区域
+ */
+#header{
+    /*height:200px;*/
+
+}
+/*使用直接子代,避免冲突*/
+#header>.topbar{
+     height:40px;
+     border-bottom:1px solid #c0c0c0;
+     line-height:40px;
+ }
+/*加上表头的中间竖线,,,,列表中间分割线的做法*/
+#header>.topbar>.container>.row>div{
+    height:40px;
+    color:#888;
+    font-size:12px;
+}
+#header>.topbar>.container>.row>div + div{
+    border-left:1px solid #c0c0c0;
+}
+
+
+#header .mobile-link{
+    color:#888;
+    font-size:12px;
+
+}
+#header .mobile-link:hover{
+  text-decoration:none;
+}
+/*二维码图片与a标签之间有距离,不能点击二维码标签
+要设置绝对定位,找到相对定位的父亲,设置left top的值
+margin-left作用是让居中,*/
+
+#header .mobile-link>img{
+   display:none;
+    position:absolute;
+    left:50%;
+    top:30px;
+    margin-left:-60px;
+    z-index:1001;
+}
+#header .mobile-link:hover>img{
+    display:block;
+
+}
+
+
+
+
+/*#header>.topbar>.container{
+    height:40px;
+    background-color: #28a4c9;
+}*/
+/**
+*  通栏广告轮播,样式.
+ */
+
+#main_id {
+
+}
+#main_id > .carousel-inner > .item {
+    /*height:410px;*/
+    background-repeat:no-repeat;
+    background-position:center center;
+    /*新知识点*/
+    background-size:cover;
+}
+/*什么时候不能用410这个高度*/
+
+/*可以通过媒体查询的方式进行控制*/
+/*当屏幕宽度大于768时候才会执行*/
+@media (min-width : 768px) {
+    #main_id > .carousel-inner > .item {
+        height:410px;
+    }
+}
+
+#main_id > .carousel-inner > .item >img {
+    width : 100%;
+}
+/**
+    网站特色样式设计
+ */
+#tese{
+    padding:50px 0;
+}
+#tese > .container > .row > div {
+    margin-bottom:20px;
+}
+/*#tese > .container > .row > div {*/
+    /*height:50px;*/
+    /*background-color:#f40;*/
+
+/*}*/
+/*#tese > .container >.row> div:nth-of-type(2n) {*/
+  /*background-color: pink;*/
+/*}*/
+
+
+
+/**
+测试样式
+ */
+/*section{*/
+    /*height:200px;*/
+    /*background-color:#fff;*/
+/*}*/
+/*section:nth-of-type(2n){*/
+    /*background-color: #f5f5f5;*/
+/*}*/
+
+
+
+/**
+*  脚部区域
+ */
+#footer{
+    height:200px;
+}
+
+
+
+
+
+
+
+
+
+
+
 /**
 Bootstrap 扩展
  */
@@ -173,132 +345,4 @@ fieldset[disabled] .navbar-itcast .btn-link:hover,
 .navbar-itcast .btn-link[disabled]:focus,
 fieldset[disabled] .navbar-itcast .btn-link:focus {
     color: #ccc;
-}
-
-/*
-公共样式
-*/
-body{
-    font-family:  "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
-}
-@font-face {
-    font-family: 'itcast';
-    src: url('../font/MiFie-Web-Font.eot') format('embedded-opentype'),
-    url('../font/MiFie-Web-Font.svg') format('svg'),
-    url('../font/MiFie-Web-Font.ttf') format('truetype'),
-    url('../font/MiFie-Web-Font.woff') format('woff');
-}
-[class^="icon-"],[class*=" icon-"]{
-    font-family: itcast;
-    font-style:normal; /*控制字体图标,不让他倾斜*/
-}
-/**
-字体图标
- */
-.icon-mobilephone::before {
-    content: "\e908";
-    font-size: 13px;
-}
-
-.icon-telephone::before {
-    content: "\e909";
-    font-size: 15px;
-}
-.icon-logo::before {
-    content: "\e93e";
-    font-size: 15px;
-}
-
-.icon-icon::before {
-    content: "\e920";
-}
-
-/**
-* 头部区域
- */
-#header{
-    /*height:200px;*/
-
-}
-/*使用直接子代,避免冲突*/
-#header>.topbar{
-     height:40px;
-     border-bottom:1px solid #c0c0c0;
-     line-height:40px;
- }
-/*加上表头的中间竖线,,,,列表中间分割线的做法*/
-#header>.topbar>.container>.row>div{
-    height:40px;
-    color:#888;
-    font-size:12px;
-}
-#header>.topbar>.container>.row>div + div{
-    border-left:1px solid #c0c0c0;
-}
-
-
-#header .mobile-link{
-    color:#888;
-    font-size:12px;
-
-}
-#header .mobile-link:hover{
-  text-decoration:none;
-}
-/*二维码图片与a标签之间有距离,不能点击二维码标签
-要设置绝对定位,找到相对定位的父亲,设置left top的值
-margin-left作用是让居中,*/
-
-#header .mobile-link>img{
-   display:none;
-    position:absolute;
-    left:50%;
-    top:30px;
-    margin-left:-60px;
-    z-index:1001;
-}
-#header .mobile-link:hover>img{
-    display:block;
-
-}
-
-
-
-
-/*#header>.topbar>.container{
-    height:40px;
-    background-color: #28a4c9;
-}*/
-/**
-*  通栏广告轮播,样式.
- */
-
-#main_id {
-
-}
-#main_id > .carousel-inner > .item {
-    height:410px;
-    background-repeat:no-repeat;
-    background-position:center center;
-    /*新知识点*/
-    background-size:cover;
-}
-/**
-测试样式
- */
-/*section{*/
-    /*height:200px;*/
-    /*background-color:#fff;*/
-/*}*/
-/*section:nth-of-type(2n){*/
-    /*background-color: #f5f5f5;*/
-/*}*/
-
-
-
-/**
-*  脚部区域
- */
-#footer{
-    height:200px;
 }
