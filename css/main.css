@@ -55,6 +55,7 @@ fieldset[disabled] .btn-itcast.active {
 .navbar-itcast {
     background-color: #fff;
     border-color: #f5f5f5;
+    margin-bottom:0;
 }
 
 .navbar-itcast .navbar-brand {
@@ -216,7 +217,7 @@ body{
 * 头部区域
  */
 #header{
-    height:200px;
+    /*height:200px;*/
 
 }
 /*使用直接子代,避免冲突*/
@@ -269,15 +270,29 @@ margin-left作用是让居中,*/
     background-color: #28a4c9;
 }*/
 /**
+*  通栏广告轮播,样式.
+ */
+
+#main_id {
+
+}
+#main_id > .carousel-inner > .item {
+    height:410px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    /*新知识点*/
+    background-size:cover;
+}
+/**
 测试样式
  */
-section{
-    height:200px;
-    background-color:#fff;
-}
-section:nth-of-type(2n){
-    background-color: #f5f5f5;
-}
+/*section{*/
+    /*height:200px;*/
+    /*background-color:#fff;*/
+/*}*/
+/*section:nth-of-type(2n){*/
+    /*background-color: #f5f5f5;*/
+/*}*/
 
 
 
