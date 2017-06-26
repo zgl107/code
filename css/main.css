@@ -128,6 +128,7 @@ margin-left作用是让居中,*/
  */
 #tese{
     padding:50px 0;
+    border-bottom: 1px solid #c0c0c0;
 }
 #tese > .container > .row > div {
     margin-bottom:20px;
@@ -141,8 +142,34 @@ margin-left作用是让居中,*/
   /*background-color: pink;*/
 /*}*/
 
+/*立即预约样式设计*/
+#ljyy {
+    border-bottom: 1px solid #c0c0c0;
+}
+#ljyy > .container > p{
+    line-height:60px;
+    font-size: 14px;
+}
+#ljyy > .container > .pull-left > span,
+#ljyy > .container > .pull-left > a   {
+    color:#e92322;
+}
+#ljyy > .container > .pull-left > a {
+    border-bottom: 1px dashed  #e92322;
+}
 
+#ljyy > .container > .pull-left > a:hover {
+    text-decoration:none;
+}
 
+/*字体图标*/
+
+.icon-uniE906:before {
+    content: "\e906";
+}
+.icon-uniE905:before {
+    content: "\e905";
+}
 /**
 测试样式
  */
