@@ -170,6 +170,19 @@ margin-left作用是让居中,*/
 .icon-uniE905:before {
     content: "\e905";
 }
+
+
+/*产品推荐样式*/
+#products {
+    backgroung-color: #f0f0f0;
+    padding:40px 0;
+}
+
+
+
+
+
+
 /**
 测试样式
  */
