@@ -174,8 +174,41 @@ margin-left作用是让居中,*/
 
 /*产品推荐样式*/
 #products {
-    backgroung-color: #f0f0f0;
-    padding:40px 0;
+    background-color: #f0f0f0;
+    padding: 40px 0;
+}
+
+#products > .container > .nav-tabs {
+    padding-left: 20px;
+}
+
+#products > .container > .nav-tabs > li {}
+
+#products > .container > .nav-tabs > li > a {
+    font-size: 16px;
+    color: #333;
+}
+
+#products > .container > .nav-tabs > li > a:hover {
+    border-color: transparent;
+    background-color: transparent;
+    color: #000;
+}
+
+#products > .container > .nav-tabs > li.active {}
+
+#products > .container > .nav-tabs > li.active > a {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 4px solid #e92322;
+}
+
+#products > .container > .tab-content {
+    padding: 20px 0;
+}
+
+#products > .container > .tab-content p {
+    margin-bottom: 0;
 }
 
 
