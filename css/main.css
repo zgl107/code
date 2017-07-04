@@ -249,6 +249,32 @@ margin-left作用是让居中,*/
 /**
 Bootstrap 扩展
  */
+
+.panel-czbk {
+    border-color: #ddd;
+}
+.panel-czbk > .panel-heading {
+    width: 120px;
+    padding: 0;
+    height: 150px;
+    border-left: 1px dashed #c0c0c0;
+    text-align: center;
+    float: right;
+}
+.panel-czbk > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #ddd;
+}
+.panel-czbk > .panel-heading .badge {
+    color: #f5f5f5;
+    background-color: #333;
+}
+.panel-czbk > .panel-body {
+    margin-right: 120px;
+    height: 150px;
+}
+
+
+
 .btn-itcast {
     color: #ffffff;
     background-color: #E92322;
