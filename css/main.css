@@ -227,6 +227,54 @@ margin-left作用是让居中,*/
     /*background-color: #f5f5f5;*/
 /*}*/
 
+/*新闻注释*/
+#news{
+    padding:50px 0;
+}
+#news .news-title{
+    padding:15px 0;
+    font-size: 10px;
+    text-align: center;
+    border-bottom:1px dashed #c0c0c0;
+}
+
+#news .news-title ::after{
+    content: ' ';
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border-radius: 5px;
+    border:1px solid #c0c0c0;
+    position: absolute;
+    bottom: -5px;
+    right: -10px;
+
+}
+
+.icon-news01:before {
+    content: "\e90e";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
+.icon-news02:before {
+    content: "\e90f";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
+.icon-news03:before {
+    content: "\e910";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
+.icon-news04:before {
+    content: "\e911";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+
 
 
 /**
