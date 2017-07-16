@@ -230,6 +230,7 @@ margin-left作用是让居中,*/
 /*新闻注释*/
 #news{
     padding:50px 0;
+    border-bottom:1px solid #f0f0f0;
 }
 #news .news-title{
     padding:15px 0;
@@ -275,8 +276,102 @@ margin-left作用是让居中,*/
     color: #EAEAEA;
 }
 
+/**
+合作伙伴
+ */
 
+#hzhb{
+    padding:30px 0;
+}
+#hzhb ul{
+    padding:0;
+    list-style: none;
+    width:818px;
+    position:relative;
+    overflow:hidden;
+}
+#hzhb ul li{
+    float:left;
+}
+#hzhb ul li+li{
+    border-left:1px dashed #e0e0e0;
+}
+#hzhb ul li a {
+    padding: 10px 20px;
+    font-size: 50px;
+    color: #888;
+}
+.icon-uniE930:hover {
+    color: #df3232;
+}
 
+.icon-uniE930:before {
+    content: "\e946";
+}
+
+.icon-uniE92F:hover {
+    color: #e8380d;
+}
+
+.icon-uniE92F:before {
+    content: "\e92f";
+}
+
+.icon-uniE92E:hover {
+    color: #ed6f00;
+}
+
+.icon-uniE92E:before {
+    content: "\e92e";
+}
+
+.icon-uniE92A:hover {
+    color: #159f69;
+}
+
+.icon-uniE92A:before {
+    content: "\e92a";
+}
+
+.icon-uniE929:hover {
+    color: #07569e;
+}
+
+.icon-uniE929:before {
+    content: "\e929";
+}
+
+.icon-uniE931:hover {
+    color: #004098;
+}
+
+.icon-uniE931:before {
+    content: "\e931";
+}
+
+.icon-uniE92C:hover {
+    color: #d32019;
+}
+
+.icon-uniE92C:before {
+    content: "\e92c";
+}
+
+.icon-uniE92B:hover {
+    color: #3eac4a;
+}
+
+.icon-uniE92B:before {
+    content: "\e92b";
+}
+
+.icon-uniE92D:hover {
+    color: #2bb289;
+}
+
+.icon-uniE92D:before {
+    content: "\e92d";
+}
 /**
 *  脚部区域
  */
